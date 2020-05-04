@@ -1,7 +1,6 @@
 {
  "env": {
-  "es6": true,
-  "node": true
+  "es6": true
  },
  "extends": [
   "airbnb-base",
@@ -15,22 +14,34 @@
  },
  "parser": "@typescript-eslint/parser",
  "parserOptions": {
+  "ecmaFeatures": {
+   "jsx": true
+  },
   "ecmaVersion": 2018,
   "sourceType": "module"
  },
- "plugins": ["@typescript-eslint", "prettier"],
+ "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
  "rules": {
   "prettier/prettier": "error",
-  "class-methods-use-this": "off",
-  "@typescript-eslint/camelcase": "off",
-  "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "_" }],
-  "import/extensions": ["error", "ignorePackages", { "ts": "never" }]
+  "react/jsx-one-expression-per-line": "off",
+  "react/jsx-props-no-spreading": "off",
+  "react/prop-types": "off",
+  "react-hooks/rules-of-hooks": "error",
+  "react-hooks/exhaustive-deps": "error",
+  "no-unused-expressions": "off",
+  "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+  "import/prefer-default-export": "off",
+  "import/extensions": [
+   "error",
+   "ignorePackages",
+   {
+    "ts": "never",
+    "tsx": "never"
+   }
+  ]
  },
  "settings": {
   "import/resolver": {
-   "node": {
-    "extensions": [".js", ".jsx", ".ts", ".tsx"]
-   },
    "typescript": {}
   }
  }
