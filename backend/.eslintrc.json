@@ -23,19 +23,20 @@
  },
  "plugins": ["@typescript-eslint", "prettier"],
  "rules": {
-  "no-underscore-dangle": "off",
-  "prettier/prettier": "error",
-  "class-methods-use-this": "off",
   "@typescript-eslint/camelcase": "off",
   "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "_" }],
   "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }],
+  "class-methods-use-this": "off",
   "import/extensions": [
    "error",
    "ignorePackages",
    {
     "ts": "never"
    }
-  ]
+  ],
+  "no-underscore-dangle": "off",
+  "no-useless-constructor": "off",
+  "prettier/prettier": "error"
  },
  "settings": {
   "import/resolver": {
