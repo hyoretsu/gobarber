@@ -39,7 +39,7 @@ describe('UpdateUserAvatar', () => {
   ).rejects.toBeInstanceOf(AppError);
  });
 
- it('should delete old avatar when uploading a new one', async () => {
+ it('should be able to delete old avatar when uploading a new one', async () => {
   const deleteFile = jest.spyOn(fakeStorageProvider, 'deleteFile');
 
   const user = await fakeUsersRepository.create({
