@@ -28,7 +28,7 @@ export default class AppointmentsRepository implements IAppointmentsRepository {
  }: IFindAllInMonthFromProviderDTO): Promise<Appointment[]> {
   const parsedMonth = String(month).padStart(2, '0');
 
-  const appointment = await this.ormRepository.find({
+  const appointments = await this.ormRepository.find({
    where: {
     provider_id,
     date: Raw(dateFieldName => `to_char(${dateFieldName},'MM-YYYY') = '${parsedMonth}-${year}`),
