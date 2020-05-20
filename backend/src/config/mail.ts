@@ -13,8 +13,8 @@ export default {
 
  defaults: {
   from: {
-   email: ,
-   name: ,
+   email: 'hyoretsu@gmail.com',
+   name: 'Aran Leite',
   },
  },
 } as IMailConfig;
