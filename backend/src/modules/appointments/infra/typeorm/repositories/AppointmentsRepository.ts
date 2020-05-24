@@ -51,8 +51,9 @@ export default class AppointmentsRepository implements IAppointmentsRepository {
   const appointments = await this.ormRepository.find({
    where: {
     provider_id,
-    date: Raw(dateFieldName => `to_char(${dateFieldName},'DD-MM-YYYY') = '${parsedDay}-${parsedMonth}-${year}`),
+    date: Raw(dateFieldName => `to_char(${dateFieldName},'DD-MM-YYYY') = '${parsedDay}-${parsedMonth}-${year}'`),
    },
+   relations: ['user'],
   });
 
   return appointments;
