@@ -11,7 +11,7 @@ export default class AppointmentsRepository implements IAppointmentsRepository {
  private ormRepository: Repository<Appointment>;
 
  constructor() {
-  this.ormRepository = getRepository(Appointment, 'PostgreSQL');
+  this.ormRepository = getRepository(Appointment);
  }
 
  public async findByDate(date: Date, provider_id: string): Promise<Appointment | undefined> {

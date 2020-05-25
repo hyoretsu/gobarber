@@ -10,7 +10,7 @@ export default class UsersRepository implements IUsersRepository {
  private ormRepository: Repository<User>;
 
  constructor() {
-  this.ormRepository = getRepository(User, 'PostgreSQL');
+  this.ormRepository = getRepository(User);
  }
 
  public async findById(id: string): Promise<User | undefined> {
