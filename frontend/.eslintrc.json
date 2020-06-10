@@ -24,13 +24,9 @@
  },
  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
  "rules": {
+  "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
   "@typescript-eslint/camelcase": "off",
-  "@typescript-eslint/explicit-function-return-type": [
-   "error",
-   {
-    "allowExpressions": true
-   }
-  ],
+  "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
   "import/extensions": [
    "error",
    "ignorePackages",
