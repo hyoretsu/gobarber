@@ -59,7 +59,6 @@ const SignIn: React.FC = () => {
      const errors = getValidationErrors(err);
 
      formRef.current?.setErrors(errors);
-
      return;
     }
 
@@ -122,7 +121,7 @@ const SignIn: React.FC = () => {
    </KeyboardAvoidingView>
 
    <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
-    <Icon name="log-in" size={20} color="#ff9000"></Icon>
+    <Icon name="log-in" size={20} color="#ff9000" />
     <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
    </CreateAccountButton>
   </>
