@@ -123,7 +123,7 @@ const SignUp: React.FC = () => {
    </KeyboardAvoidingView>
 
    <BackToSignIn onPress={() => navigation.navigate('SignIn')}>
-    <Icon name="arrow-left" size={20} color="#fff"></Icon>
+    <Icon name="arrow-left" size={20} color="#fff" />
     <BackToSignInText>Voltar para logon</BackToSignInText>
    </BackToSignIn>
   </>
